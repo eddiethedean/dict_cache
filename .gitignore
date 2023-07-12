@@ -1,0 +1,11 @@
+notebooks/
+
+dict_cache.egg-info/
+dict_cache/__pycache__/
+dist/
+build/
+.vscode/
+.ipynb_checkpoints/
+__pycache__/
+tests/__pycache__/
+.DS_Store
