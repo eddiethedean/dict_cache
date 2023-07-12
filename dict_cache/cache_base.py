@@ -4,11 +4,13 @@ from typing import Any
 from dict_cache.backup_interface import BackupDict
 
 
-class CacheDict:
+class CacheBase:
     """
     A dict backed up by persistent storage.
     Accessed key, values are stored in RAM as a dict for speedy access.
     Not-accessed key, values are stored in persistent storage.
+
+    Requires a BackupDict object to be passed in.
     """
     def __init__(self, backup_dict: BackupDict) -> None:
         self._backup_dict = backup_dict

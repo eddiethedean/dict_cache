@@ -1,8 +1,14 @@
 import shelve
 from typing import Any
 
+from dict_cache.backup_interface import BackupDict
 
-class BackupShelve:
+
+class BackupShelve(BackupDict):
+    """
+    A BackupDict that uses shelve persistent storage
+    to store key, values.
+    """
     def __init__(self, path: str) -> None:
         self.path = path
         
